@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Responsive Shopping Cart design</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Carme&family=Gabarito:wght@400..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Staatliches&family=Teko:wght@300..700&display=swap"
+		rel="stylesheet">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		type="text/css">
+	<style>
+		body {
+			background: #bbbabe;
+			font-family: montserrat;
+		}
+
+		h1 {
+			font-family: "Staatliches", sans-serif;
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		.navbar {
+			background-color: #000000 !important;
+			border: 2px solid #ffffff;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+		.navbar-brand {
+			font-size: 1.2rem;
+			background-color: #666666;
+			color: #ffffff !important;
+			padding: 3px 55px;
+			border-radius: 30px;
+			text-decoration: none;
+		}
+
+		.navbar .btn {
+			font-size: 1rem;
+		}
+
+		.nav-link {
+			border: 1px solid #ffffff;
+			border-radius: 5px;
+			padding: 7px 75px !important;
+			margin: 0px;
+		}
+
+		.navbar .btn-outline-dark {
+			border: none;
+			font-size: 1.2rem;
+		}
+
+		.nav-item {
+			font-family: "Gabarito", sans-serif;
+			font-optical-sizing: auto;
+			font-weight: 10;
+			margin-right: 7px;
+		}
+
+		.icon-buttons {
+			margin-left: auto;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.search-bar {
+			width: 200px;
+			padding: 5px 10px;
+			border: 1px solid #ffffff;
+			border-radius: 5px;
+			background-color: #333;
+			color: #ffffff;
+			font-size: 1rem;
+		}
+
+		.search-bar::placeholder {
+			color: #cccccc;
+		}
+
+		.btn-outline-light {
+			border: none;
+			background: none;
+			color: #ffffff;
+			padding: 5px;
+			font-size: 1.2rem;
+		}
+
+		.wrapper {
+			max-width: 1000px;
+			margin: 0 auto;
+		}
+
+		.wrapper h1 {
+			padding: 20px 0;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.project {
+			display: flex;
+		}
+
+		.shop {
+			flex: 75%;
+		}
+
+		.box {
+			display: flex;
+			width: 100%;
+			height: 200px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			background: #fff;
+			transition: all .6s ease;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		}
+
+		.box:hover {
+			border: none;
+			transform: scale(1.01);
+		}
+
+		.box img {
+			width: 300px;
+			height: 200px;
+			object-fit: cover;
+		}
+
+		.content {
+			padding: 20px;
+			width: 100%;
+			position: relative;
+		}
+
+		.content h3 {
+			margin-bottom: 30px;
+		}
+
+		.content h4 {
+			margin-bottom: 50px;
+		}
+
+		.btn-area {
+			position: absolute;
+			bottom: 20px;
+			right: 20px;
+			padding: 10px 25px;
+			background-color: #000000;
+			color: white;
+			cursor: pointer;
+			border-radius: 5px;
+		}
+
+		.btn-area:hover {
+			background-color: #76bfb6;
+			color: #fff;
+			font-weight: 600;
+		}
+
+		.unit input {
+			width: 40px;
+			padding: 5px;
+			text-align: center;
+		}
+
+		.btn-area i {
+			margin-right: 5px;
+		}
+
+		.right-bar {
+			flex: 25%;
+			margin-left: 20px;
+			padding: 20px;
+			height: 400px;
+			border-radius: 5px;
+			background: #fff;
+			box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+		}
+
+		.right-bar hr {
+			margin-bottom: 25px;
+		}
+
+		.right-bar p {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 30px;
+			font-size: 20px;
+		}
+
+		.right-bar a {
+			background-color: #000000;
+			color: #fff;
+			text-decoration: none;
+			display: block;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			font-weight: 900;
+		}
+
+		.right-bar i {
+			margin-right: 15px;
+		}
+
+		.right-bar a:hover {
+			background-color: #000000;
+		}
+
+		@media screen and (max-width: 700px) {
+			.content h3 {
+				margin-bottom: 15px;
+			}
+
+			.content h4 {
+				margin-bottom: 20px;
+			}
+
+			.btn2 {
+				display: none;
+			}
+
+			.box {
+				height: 150px;
+			}
+
+			.box img {
+				height: 150px;
+				width: 200px;
+			}
+		}
+
+		@media screen and (max-width: 900px) {
+			.project {
+				flex-direction: column;
+			}
+
+			.right-bar {
+				margin-left: 0;
+				margin-bottom: 20px;
+			}
+		}
+
+		@media screen and (max-width: 1250px) {
+			.wrapper {
+				max-width: 95%;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg bg-dark">
+		<div class="container d-flex align-items-center justify-content-between">
+
+			<a class="navbar-brand text-light" href="index.html"><img src="imagesback/logo.png" width="50"
+					alt="">Verte</a>
+
+			<div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+				<ul class="navbar-nav">
+					<li class="nav-item">
+						<a class="nav-link text-light" href="index.html">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="men.html">Men</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="women.html">Women</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="d-flex align-items-center">
+				<input type="text" class="search-bar" placeholder="Search For Items">
+				<a href="#" class="btn btn-outline-light me-2">
+					<i class="bi bi-search"></i>
+				</a>
+				<a href="cart.html" class="btn btn-outline-light me-2">
+					<i class="bi bi-cart"></i>
+				</a>
+				<a href="#" class="btn btn-outline-light me-2">
+					<i class="bi bi-heart"></i>
+				</a>
+				<a href="login.html" class="btn btn-outline-light">
+					<i class="bi bi-person"></i>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<div class="wrapper">
+		<h1>Shopping Cart</h1>
+		<div class="project">
+			<div class="shop">
+				<div class="box">
+					<img src="imagesback/sweater.jpg">
+					<div class="content">
+						<h3>Cream Knit Sweater</h3>
+						<h4>Price: $400</h4>
+						<p class="unit">Quantity: <input name="" value="2"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span
+								class="btn2">Remove</span></p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="imagesback/pants.jpg">
+					<div class="content">
+						<h3>Sleek Leather Pants</h3>
+						<h4>Price: $400</h4>
+						<p class="unit">Quantity: <input name="" value="1"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span
+								class="btn2">Remove</span></p>
+					</div>
+				</div>
+				<div class="box">
+					<img src="imagesback/skirt.jpg">
+					<div class="content">
+						<h3>Sequin Mini Skirt</h3>
+						<h4>Price: $250</h4>
+						<p class="unit">Quantity: <input name="" value="0"></p>
+						<p class="btn-area"><i aria-hidden="true" class="fa fa-trash"></i> <span
+								class="btn2">Remove</span></p>
+					</div>
+				</div>
+			</div>
+			<div class="right-bar">
+				<p><span>Subtotal</span> <span>$120</span></p>
+				<hr>
+				<p><span>Tax (5%)</span> <span>$6</span></p>
+				<hr>
+				<p><span>Shipping</span> <span>$15</span></p>
+				<hr>
+				<p><span>Total</span> <span>$141</span></p><a href="#"><i class="fa fa-shopping-cart"></i>Checkout</a>
+			</div>
+		</div>
+	</div>
+	<section id="section4">
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
+                </ul>
+                <p class="text-center text-muted">&copy; 2021 Verte, Inc</p>
+            </footer>
+        </div>
+    </section>
+
+
+
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+	</script>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+
+</html>

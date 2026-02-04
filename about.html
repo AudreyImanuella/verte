@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+    <style>
+        .navbar {
+            background-color: #000000 !important;
+            border: 2px solid #ffffff;
+            border-radius: 10px;
+            padding: 10px;
+        }
+
+        .navbar-brand {
+            font-size: 1.2rem;
+            background-color: #666666;
+            color: #ffffff !important;
+            padding: 3px 55px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .navbar .btn {
+            font-size: 1rem;
+        }
+
+        .nav-link {
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            padding: 7px 75px !important;
+            margin: 0px;
+        }
+
+        .navbar .btn-outline-dark {
+            border: none;
+            font-size: 1.2rem;
+        }
+
+        .nav-item {
+            font-family: "Gabarito", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 10;
+            margin-right: 7px;
+        }
+
+        .icon-buttons {
+            margin-left: auto;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar {
+            width: 200px;
+            padding: 5px 10px;
+            border: 1px solid #ffffff;
+            border-radius: 5px;
+            background-color: #333;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        .search-bar::placeholder {
+            color: #cccccc;
+        }
+
+        .btn-outline-light {
+            border: none;
+            background: none;
+            color: #ffffff;
+            padding: 5px;
+            font-size: 1.2rem;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: poppins;
+        }
+
+        #about-section {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 12%;
+        }
+
+        .about-left img {
+            width: 420px;
+            height: auto;
+            transform: translateY(50px);
+        }
+
+        .about-right {
+            width: 54%;
+        }
+
+        .about-right ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-right h1 {
+            color: #000000;
+            font-size: 37px;
+            margin-bottom: 5px;
+        }
+
+        .about-right p {
+            color: #444;
+            line-height: 26px;
+            font-size: 15px;
+        }
+
+        .about-right .address {
+            margin: 25px 0;
+        }
+
+        .about-right .address ul li {
+            margin-bottom: 5px;
+        }
+
+        .address .address-logo {
+            margin-right: 15px;
+            color: #000000;
+        }
+
+        .address .saprater {
+            margin: 0 35px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a class="navbar-brand text-light" href="index.html"><img src="imagesback/logo.png" width="50"
+                    alt="">Verte</a>
+
+            <div class="collapse navbar-collapse justify-content-center " id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="men.html">Men</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="women.html">Women</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="d-flex align-items-center">
+                <input type="text" class="search-bar" placeholder="Search For Items">
+                <a href="#" class="btn btn-outline-light me-2">
+                    <i class="bi bi-search"></i>
+                </a>
+                <a href="cart.html" class="btn btn-outline-light me-2">
+                    <i class="bi bi-cart"></i>
+                </a>
+                <a href="#" class="btn btn-outline-light me-2">
+                    <i class="bi bi-heart"></i>
+                </a>
+                <a href="login.html" class="btn btn-outline-light">
+                    <i class="bi bi-person"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about-section">
+        <!-- about left  -->
+        <div class="about-left">
+            <img src="imagesback/about us.jpg" alt="About Img" />
+        </div>
+
+        <!-- about right  -->
+        <div class="about-right">
+            <h4>Verte</h4>
+            <h1>About Us!</h1>
+            <p>At Verte, we believe that fashion should not only look good but also do good. Our brand is committed to
+                revolutionizing the fashion industry with biodegradable clothing designed to reduce waste and minimize
+                our environmental impact. By blending timeless style with sustainable innovation, Verte offers a
+                wardrobe that aligns with your values without compromising on quality or elegance.</p>
+            <p>
+                Every piece in our collection is thoughtfully crafted to ensure comfort, durability, and a future where
+                fashion contributes to a cleaner planet. Whether you're dressing for work, play, or special occasions,
+                Verte empowers you to make choices that make a difference.
+            </p>
+            <p>
+                Together, let's create a world where sustainability is always in style.
+            </p>
+            <div class="address">
+                <ul>
+                    <li>
+                        <span class="address-logo">
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                        <p>Address</p>
+                        <span class="saprater">:</span>
+                        <p>123 Verde Street, Greenpoint, NY 11222</p>
+                    </li>
+                    <li>
+                        <span class="address-logo">
+                            <i class="fas fa-phone-alt"></i>
+                        </span>
+                        <p>Phone No</p>
+                        <span class="saprater">:</span>
+                        <p>(555) 123-4567</p>
+                    </li>
+                    <li>
+                        <span class="address-logo">
+                            <i class="far fa-envelope"></i>
+                        </span>
+                        <p>Email ID</p>
+                        <span class="saprater">:</span>
+                        <p>contact@vertefashion.com</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="section4">
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
+                </ul>
+                <p class="text-center text-muted">&copy; 2021 Company, Inc</p>
+            </footer>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</body>
+
+</html>
